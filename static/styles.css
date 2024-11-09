@@ -131,13 +131,12 @@ a:hover {
     .logo {
         width: 120px;
         height: 120px;
-        margin-bottom: 10px; /* Space between logo and title */
+        margin-bottom: 30px; /* Space between logo and title */
     }
 
     .site-title {
         font-size: 20px;
-        text-align: center;
-        margin-top: 10px;
+        margin-top: 30px;
     }
 
     .shoes-list {
