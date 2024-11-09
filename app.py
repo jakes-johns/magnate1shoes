@@ -102,5 +102,10 @@ def cart():
     total_price = sum(item['price'] for item in cart)
     return render_template('cart.html', cart=cart, total_price=total_price)
 
+@app.route('/clear_cart')
+def clear_cart():
+    # Logic to clear the cart
+    return redirect(url_for('cart'))
+
 if __name__ == '__main__':
     app.run(debug=True)
