@@ -66,7 +66,7 @@ def purchase(shoe_id):
             Price: ${shoe['price']}
             """
             mail.send(msg)
-            flash("Purchase successful! Notification sent to the owner.")
+            flash("Purchase successful! We will get back to you soon.")
             print("Email sent successfully.")  # For debugging
         except Exception as e:
             flash("Purchase successful! However, notification could not be sent.")
