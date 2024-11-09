@@ -125,6 +125,7 @@ a:hover {
     .site-header {
         flex-direction: column;
         align-items: center;
+        text-align: center;      /* Ensure title is centered below logo */
     }
 
     .logo {
