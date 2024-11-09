@@ -37,7 +37,7 @@
 </head>
 <body>
     <h1>Purchase {{ shoe.name }}</h1>
-    <p>Price: ${{ shoe.price }}</p>
+    <p>Price: Ksh{{ shoe.price }}</p>
 
     {% with messages = get_flashed_messages() %}
         {% if messages %}
