@@ -21,11 +21,11 @@ mail = Mail(app)
 
 # Dummy data for shoes
 shoes = [
-    {'id': 1, 'name': 'Running Shoes', 'price': 80, 'description': 'Perfect for running', 'image': 'images/running_shoes.jpg'},
-    {'id': 2, 'name': 'Casual Sneakers', 'price': 60, 'description': 'Great for everyday wear', 'image': 'images/casual_sneakers.jpg'},
-    {'id': 3, 'name': 'Formal Shoes', 'price': 120, 'description': 'Sleek and stylish for formal events', 'image': 'images/formal_shoes.jpg'},
-    {'id': 4, 'name': 'Formal Shoes', 'price': 100, 'description': 'Elegant and professional', 'image': 'images/formal_shoes.jpg'},
-    {'id': 5, 'name': 'Sandals', 'price': 40, 'description': 'Comfortable for summer', 'image': 'images/sandals.jpg'}
+    {'id': 1, 'name': 'Running Shoes', 'price': 649, 'description': 'Perfect for running', 'image': 'images/running_shoes.jpg'},
+    {'id': 2, 'name': 'Casual Sneakers', 'price': 1,190, 'description': 'Great for everyday wear', 'image': 'images/casual_sneakers.jpg'},
+    {'id': 3, 'name': 'Formal Shoes', 'price': 1,399, 'description': 'Sleek and stylish for formal events', 'image': 'images/formal_shoes.jpg'},
+    {'id': 4, 'name': 'Basketball Shoes', 'price': 799, 'description': 'Ideal for the court', 'image': 'images/basketball_shoes.jpg'},
+    {'id': 5, 'name': 'Sandals', 'price': 850, 'description': 'Comfortable for summer', 'image': 'images/sandals.jpg'}
 ]
 
 # Home route displaying all shoes
