@@ -104,7 +104,7 @@ def cart():
 
 @app.route('/clear_cart')
 def clear_cart():
-    # Logic to clear the cart
+    session['cart'] = []  # Clear the cart in the session
     return redirect(url_for('cart'))
 
 if __name__ == '__main__':
