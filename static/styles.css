@@ -123,20 +123,22 @@ a:hover {
 /* For mobile devices (less than 600px) */
 @media (max-width: 600px) {
     .site-header {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;  /* Ensure space between items */
         align-items: center;
-        text-align: center;      /* Ensure title is centered below logo */
+        text-align: left;      /* left align content */
     }
 
     .logo {
         width: 120px;
         height: 120px;
-        margin-bottom: 10px; /* Space between logo and title */
+        margin-right: 10px; /* Space between logo and title */
     }
 
     .site-title {
         font-size: 10px;
-        margin-top: 10px;
+        text-align: right; /* Align title to the right */
+        flex-grow: 1;  /* Make title take the remaining space */
     }
 
     .shoes-list {
