@@ -53,7 +53,7 @@
     <h1>{{ shoe.name }}</h1>
     <img src="{{ url_for('static', filename=shoe.image) }}" alt="{{ shoe.name }}" width="300" height="300">
     <p>{{ shoe.description }}</p>
-    <p>Price: ${{ shoe.price }}</p>
+    <p>Price: Ksh {{ shoe.price }}</p>
 
     <!-- Link to add shoe to cart -->
     <a href="{{ url_for('add_to_cart', shoe_id=shoe.id) }}">Add to Cart</a>
