@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ shoe.name }}</title>
+    <style>
+        /* Basic styling for links */
+        a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: white;
+            background-color: #4CAF50;
+            border-radius: 5px;
+        }
+
+        /* Hover effect for links */
+        a:hover {
+            background-color: #45a049;
+        }
+
+        /* Styling for the 'Buy Now' button */
+        .buy-button {
+            background-color: #f44336;
+        }
+
+        /* Hover effect for the 'Buy Now' button */
+        .buy-button:hover {
+            background-color: #da190b;
+        }
+
+        /* Image styling */
+        img {
+            border-radius: 5px;
+        }
+
+        /* Styling for the title */
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Styling for the price */
+        p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1>{{ shoe.name }}</h1>
+    <img src="{{ url_for('static', filename=shoe.image) }}" alt="{{ shoe.name }}" width="300" height="300">
+    <p>{{ shoe.description }}</p>
+    <p>Price: ${{ shoe.price }}</p>
+
+    <!-- Link to add shoe to cart -->
+    <a href="{{ url_for('add_to_cart', shoe_id=shoe.id) }}">Add to Cart</a>
+
+    <!-- Link to purchase the shoe (corrected to use the 'purchase' route) -->
+    <a href="{{ url_for('purchase', shoe_id=shoe.id) }}" class="buy-button">Buy Now</a>
+
+    <!-- Back to home page -->
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>

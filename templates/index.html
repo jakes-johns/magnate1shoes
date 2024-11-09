@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Store</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Header Section with Logo and Title -->
+    <header class="site-header">
+        <span class="logo"></span>  <!-- Logo placeholder -->
+        <h1 class="site-title">MAGNATE EMPIRE</h1>
+    </header>
+    
+    <!-- Flash Message Display -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="flash-messages">
+                <ul>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <h1>Shoe Store</h1>
+    
+    <div class="shoes-list">
+        {% for shoe in shoes %}
+            <div class="shoe-item">
+                <img src="{{ url_for('static', filename=shoe.image) }}" alt="{{ shoe.name }}" width="150" height="150">
+                <h2>{{ shoe.name }}</h2>
+                <p>{{ shoe.description }}</p>
+                <p>Price: ${{ shoe.price }}</p>
+                <a href="{{ url_for('shoe_detail', shoe_id=shoe.id) }}">View Details</a>
+                <a href="{{ url_for('add_to_cart', shoe_id=shoe.id) }}">Add to Cart</a>
+                <a href="{{ url_for('purchase', shoe_id=shoe.id) }}" class="buy-button">Buy Now</a>
+            </div>
+        {% endfor %}
+    </div>
+    
+    <a href="{{ url_for('cart') }}">View Cart</a>
+</body>
+</html>

@@ -1,0 +1,180 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    padding: 20px;
+    background-image: url('/static/images/background.jpg');
+    background-size: cover; /* Ensures the image covers the whole area */
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-position: center; /* Centers the image */
+}
+
+/* Header Section */
+.site-header {
+    display: flex;
+    font-family: Papyrus, fantasy;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header {
+    background-color: #f3f1e5;
+    height: 50px;
+    width: 100%;
+    opacity: 0.9;
+    margin-bottom: 10px;
+}
+
+.logo {
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    margin-right: 15px;
+    background-image: url('/static/images/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.site-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* Shoes List Section */
+.shoes-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.shoe-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shoe-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.buy-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #218838;
+}
+
+/* Flash message styles */
+.flash-messages {
+    background-color: #f0f8ff;
+    border: 1px solid #d0e4ff;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.flash-messages ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.flash-messages li {
+    color: #3c763d;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For mobile devices (less than 600px) */
+@media (max-width: 600px) {
+    .site-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .site-title {
+        font-size: 20px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .shoes-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .shoe-item {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 15px;
+    }
+
+    .buy-button {
+        width: 100%;
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    /* Flash messages */
+    .flash-messages {
+        padding: 5px;
+    }
+}
+
+/* For tablet devices (600px to 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .shoe-item {
+        width: 45%;
+    }
+
+    .buy-button {
+        width: auto;
+    }
+}
+
+/* For desktop devices (greater than 900px) */
+@media (min-width: 901px) {
+    .shoe-item {
+        width: 200px; /* Default width */
+    }
+}
