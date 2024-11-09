@@ -130,13 +130,13 @@ a:hover {
     }
 
     .logo {
-        width: 120px;
-        height: 120px;
+        width: 200px;
+        height: 200px;
         margin-right: 10px; /* Space between logo and title */
     }
 
     .site-title {
-        font-size: 10px;
+        font-size: 20px;
         text-align: right; /* Align title to the right */
         flex-grow: 1;  /* Make title take the remaining space */
     }
