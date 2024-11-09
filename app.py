@@ -63,7 +63,7 @@ def purchase(shoe_id):
             Client Name: {client_name}
             Client Email: {client_email}
             Item Purchased: {shoe['name']}
-            Price: ${shoe['price']}
+            Price: Ksh{shoe['price']}
             """
             mail.send(msg)
             flash("Purchase successful! We will get back to you soon.")
